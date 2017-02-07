@@ -6,7 +6,16 @@
 
 cs142App.controller('StatesController', ['$scope', function($scope) {
 
-   // Replace this with the code for CS142 Project #4, Problem #2
-   console.log('window.cs142models.statesModel()', window.cs142models.statesModel());
+	// Replace this with the code for CS142 Project #4, Problem #2
+	console.log('window.cs142models.statesModel()', window.cs142models.statesModel()[0,0]);
+
+	// $scope.stateInput = '';
+	$scope.stateArray = window.cs142models.statesModel();
+
+	$scope.filterStateArray = function() {
+		console.log("filterStateArray is called")
+	};
 
 }]);
+
+// window.cs142models.statesModel()[0,i]
