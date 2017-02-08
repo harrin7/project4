@@ -1,11 +1,11 @@
 <div>
     <h1>CS142 Project#4 States</h1>
     <div class="states-update">
-        <label>Type state name here: <input type="text" ng-model="stateInput" ng-change="filterStateArray()"></label>
+        <label>Type state name here: <input type="text" ng-model="states.stateInput" ng-change="filterStateArray()"></label>
     </div> 
     <div class="state-list">
-    	<p ng-if="stateInput">Search: {{stateInput}}
-	    	<ul style="list-style-type:none" ng-if="stateInput">	
+    	<p ng-if="states.stateInput">Search: {{stateInput}}
+	    	<ul style="list-style-type:none" ng-if="states.stateInput">	
 	    		<li ng-repeat="state in stateArray">{{state}}</li>
 	    	</ul>
     	</p>
