@@ -4,9 +4,12 @@
         <label>Type state name here: <input type="text" ng-model="states.stateInput" ng-change="filterStateArray()"></label>
     </div> 
     <div class="state-list">
-    	<p ng-if="states.stateInput">Search: {{stateInput}}
+    	<p ng-if="states.stateInput">Search: {{states.stateInput}}
 	    	<ul style="list-style-type:none" ng-if="states.stateInput">	
-	    		<li ng-repeat="state in stateArray">{{state}}</li>
+	    		<li ng-repeat="state in stateArray | filter:states.stateInput as results">{{state}}</li>
+	    		<li class="animate-repeat" ng-if="results.length === 0">
+	    		  <strong>No states found...</strong>
+	    		</li>
 	    	</ul>
     	</p>
     </div>
