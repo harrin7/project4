@@ -4,13 +4,18 @@
     <title>{{main.title || "CS142 Class Project"}}</title>
     <script src="node_modules/angular/angular.js"></script>
     <script src="mainController.js"></script>
-
+    <!-- Include controller, css, and state modelData -->
     <script src="components/states/statesController.js"></script>
     <link rel="stylesheet" type="text/css" href="components/states/states.css" />
-
     <script src="modelData/states.js"></script>
+    <!-- Include controller and css for header problem 3 -->
+    <script src="components/header/headerController.js"></script>
+    <link rel="stylesheet" type="text/css" href="components/header/header.css" />
   </head>
   <body>
+  <!-- Include header -->
+  <div ng-include="'components/header/headerTemplate.html'" ng-controller="HeaderController"></div>
+  <!-- Incldue states controller -->
   <div ng-include="'components/states/statesTemplate.html'" ng-controller="StatesController"></div>
   </body>
 </html>

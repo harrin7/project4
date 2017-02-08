@@ -20,10 +20,7 @@ cs142App.controller('ExampleController', ['$scope', function($scope) {
    if ($scope.main) {
       $scope.main.title = 'CS142 Project #4 - Example'; // 
    }
-
-  
-   $scope.main.mottoInput = 'Motto';
-   /*
+    /*
     *  The view template accesses there properties:
     *
     *  testVariable = A string property that is displayed by the template. It demonstrates

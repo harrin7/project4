@@ -16,8 +16,13 @@ controller named MainController.-->
         <script src="components/example/exampleController.js"></script>
         <link rel="stylesheet" type="text/css" href="components/example/example.css" />
         <script src="modelData/example.js"></script>
+        <!-- Include contorller and css for header problem 3 -->
+        <script src="components/header/headerController.js"></script>
+        <link rel="stylesheet" type="text/css" href="components/header/header.css" />
     </head>
     <body>
+        <!-- Include header -->
+        <div ng-include="'components/header/headerTemplate.html'" ng-controller="HeaderController"></div>
         <div class="header">
             <h2>Pat Harrington: {{main.mottoInput}}</h2>
         </div> <!-- Your problem #1 header widget goes here-->
