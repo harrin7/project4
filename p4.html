@@ -4,6 +4,8 @@
     <title>{{main.title || "CS142 Class Project"}}</title>
     <script src="node_modules/angular/angular.js"></script>
     <script src="mainController.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <!-- Include controller, css, and state modelData -->
     <script src="components/states/statesController.js"></script>
     <link rel="stylesheet" type="text/css" href="components/states/states.css" />
@@ -18,27 +20,27 @@
     <!-- Include ng-route -->
     <script src="node_modules/angular-route/angular-route.min.js"></script>
   </head>
-  <body>
+  <body class="background">
             <!-- Include header -->
-      <div ng-include="'components/header/headerTemplate.html'" ng-controller="HeaderController">
+     <div ng-include="'components/header/headerTemplate.html'" ng-controller="HeaderController"></div>       
+     
+     <div class="switchPage">   
+        <button class="button" ng-click="switch()" ng-init="main.switch = 0">
+          switch
+        </button>
       </div>
-      <button ng-click="switch()" ng-init="main.switch = 0">
-        Switch
-      </button>
 
     <div ng-if="main.switch">
-      <div class="header">
-          <h2>Pat Harrington: {{main.mottoInput}}</h2>
+      <div>
+          <h2 class="header"> pat harrington: {{main.mottoInput}}</h2>
       </div> 
       <!--Include the example view template in this div. -->
-      <div ng-include="'components/example/exampleTemplate.html'" ng-controller="ExampleController"></div>
+      <div class="indent" ng-include="'components/example/exampleTemplate.html'" ng-controller="ExampleController"></div>
     </div>
 
     <div ng-if="main.switch === 0">
-    <!-- Include header -->
-      <div ng-include="'components/header/headerTemplate.html'" ng-controller="HeaderController"></div>
       <!-- Incldue states controller -->
-      <div ng-include="'components/states/statesTemplate.html'" ng-controller="StatesController">
+      <div class="indent" ng-include="'components/states/statesTemplate.html'" ng-controller="StatesController">
     </div>
 
 

@@ -1,0 +1,43 @@
+.header {
+	background-color: #EFCB68;
+	color: #24272B;
+	padding: 0px 10px 5px 10px;
+	margin: 0px;
+	text-align: center;
+	border-bottom: solid 2px #24272B;
+	font-family: 'Lato', sans-serif;
+
+}
+
+.background{
+	background-color: #FFFDF7;
+	margin: 0px;
+}
+
+.switchPage{
+	background-color: #24272B;
+	text-align: center;
+	padding: 3px 5px 5px 5px;
+	color: #FFFDF7;
+}
+
+.indent{
+	margin: 10px;
+	font-family: 'Lato', sans-serif;
+}
+
+.button{
+	background-color: #24272B;
+	color: #EFCB68;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+}
+
+a {
+	color: #EFCB68;
+	padding: 0px 10px 0px 10px;
+	text-decoration: none;
+}
+

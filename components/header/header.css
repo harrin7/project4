@@ -1,0 +1,9 @@
+.mainHeader{
+	background-color: #6E7E85;
+	color: #EFCB68;
+	margin: 0px;
+	padding: 5px 5px 5px 5px;
+	border-bottom: solid 2px #24272B;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+}

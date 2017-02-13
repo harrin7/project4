@@ -4,6 +4,8 @@
     <title>{{main.title || "CS142 Class Project"}}</title>
     <script src="node_modules/angular/angular.js"></script>
     <script src="mainController.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <!-- Include controller, css, and state modelData -->
     <script src="components/states/statesController.js"></script>
     <link rel="stylesheet" type="text/css" href="components/states/states.css" />
@@ -18,14 +20,16 @@
     <!-- Include ng-route -->
     <script src="node_modules/angular-route/angular-route.min.js"></script>
   </head>
-  <body>
+  <body class="background">
             <!-- Include header -->
       <div ng-include="'components/header/headerTemplate.html'" ng-controller="HeaderController">
       </div>
-      <a href="#!example">Example</a>
-      <a href="#!states">States</a>
+      <div class="switchPage">
+          <a href="#!example">Example</a>
+          <a href="#!states">States</a>
+      </div>
     <!-- Change this to ng-view instead of ng-if -->
-    <div ng-view></div>
+    <div class="indent" ng-view></div>
 
   </body>
 </html>

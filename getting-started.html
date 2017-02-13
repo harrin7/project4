@@ -11,6 +11,7 @@ controller named MainController.-->
         <!--Include the main controller (MainController) and stylesheet -->
         <script src="mainController.js"></script>
         <link rel="stylesheet" type="text/css" href="main.css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <!--Include the controllers and models for all the view templates we are using.  Currently
         that is only the example component.-->
         <script src="components/example/exampleController.js"></script>
@@ -22,16 +23,16 @@ controller named MainController.-->
         <!-- Include ng-route -->
         <script src="node_modules/angular-route/angular-route.min.js"></script>
     </head>
-    <body>
+    <body class="background">
         <!-- Include header -->
         <div ng-include="'components/header/headerTemplate.html'" ng-controller="HeaderController"></div>
-        <div class="header">
-            <h2>Pat Harrington: {{main.mottoInput}}</h2>
+        <div>
+            <h2 class="header">pat harrington: {{main.mottoInput}}</h2>
         </div> <!-- Your problem #1 header widget goes here-->
 
         <!--Include the example view template in this div. This will result in the
         controller (ExampleController) being started and the template inserted and
         filled in into the DOM.-->
-        <div ng-include="'components/example/exampleTemplate.html'" ng-controller="ExampleController"></div>
+        <div class="indent" ng-include="'components/example/exampleTemplate.html'" ng-controller="ExampleController"></div>
     </body>
 </html>
